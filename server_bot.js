@@ -36,7 +36,7 @@ _nombreDelServidor = '[moises-server-bot]';
   var T = new Twit(config);
 
   //node_date_utils.languaje("es");
-  console.log(node_date_utils.today());
+  //console.log(node_date_utils.today());
   // OJO: Lista de seguidores
   // Requests / 15-min window (user auth) 15
   // Requests / 15-min window (app auth) 30
