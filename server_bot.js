@@ -1,4 +1,4 @@
-// adaptacion para que use el puerto asignado por HEROKU
+// para que use el puerto asignado por HEROKU
 // o en su defecto tome el 8080 local mi compu
    var _number_port = process.env.PORT || 8080;
 // =================================================================

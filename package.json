@@ -7,7 +7,7 @@
     "start": "node server_bot.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "engines":{
+  "engines": {
     "node": "4.6.1",
     "npm": "2.15.9"
   },
