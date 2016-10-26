@@ -1,7 +1,7 @@
 ﻿{
 	"name": "Moises",
 	"short_name": "Moises",
-	"start_url": "home.html",
+	"start_url": "index.html",
 	"display": "fullscreen",
 	"orientation": "landscape",
 	"icons": [{
