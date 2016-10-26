@@ -4,7 +4,6 @@
 // =================================================================
    var WebSocketServer = require('ws').Server
    var wss = new WebSocketServer({ port:_number_port });
-   require('./index.php');
 
    wss.on('connection', function connection(ws){
      ws.on('message',function incoming(message){
