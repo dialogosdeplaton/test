@@ -10,23 +10,18 @@
        console.log('received: %s', message);
 
        if(message=="get_followersList"){
-         //#TEST followersList();
-         //console.log(_followersList_array.toString());
-         //ws.send(_followersList_array.toString());
+         followersList();
+         //setTimeout('return 0',1000);
          ws.send(JSON.stringify(_followersList_array));
          console.log(JSON.stringify(_followersList_array));
        }
 
      });
-     //ws.send('te paso la coleccion de seguidores!');
   });
-
-//#back tokencount(replace(replace(replace(WebSocket.MessageText,"[","")  ,"]","")  , ".","") ,",")
 
 _nombreDelServidor = '[moises-server-bot]';
 //#TEST para la version final sacar el hardcodeo de screen_name
 //esta para evitar la restriccion de peticiones GET
-  _followersList_array = [ 'DDPlaton', 'UrugaYay' ];
 
   console.log(_nombreDelServidor + ' running...');
   var node_date_utils = require('date-utils');
@@ -36,12 +31,11 @@ _nombreDelServidor = '[moises-server-bot]';
 
   //node_date_utils.languaje("es");
   //console.log(node_date_utils.today());
+
   // OJO: Lista de seguidores
   // Requests / 15-min window (user auth) 15
   // Requests / 15-min window (app auth) 30
-
-  //#TEST
-  //setInterval (followersList,1000*60*16);
+  setInterval (followersList,1000*60*16);
 
   function followersList(){
       var params = {
@@ -54,13 +48,12 @@ _nombreDelServidor = '[moises-server-bot]';
         if(err){
             console.log('#followers/list [FAIL]');
         }else{
-            console.log('#followers/list [OK]');
             var seguidores = data.users;
-
             for(var i = 0; i<seguidores.length; i++){
                _followersList_array.push(seguidores[i].screen_name);
                console.log(seguidores[i].screen_name);
             }
+            console.log('#followers/list [OK]');
             console.log(_followersList_array);
         }
       }
@@ -121,7 +114,7 @@ _nombreDelServidor = '[moises-server-bot]';
     var name = eventMsg.source.name;
     var screenName = eventMsg.source.screen_name;
      //recordar: el "." es para que aparezca en el tweets(el main)) y no en tweets&replys
-    tweetIt('.hola @' + screenName + ' #saludo #seguidor #fe  http://moises.pe.hu/jscrudo_seguimientoliviano/');
+    tweetIt('.hola @' + screenName + ' #mensajeSaludo   http://moises.pe.hu');
 
     function tweetIt(txt){
       var tweet = {
