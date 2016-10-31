@@ -28,6 +28,7 @@ _nombreDelServidor = '[moises-server-bot]';
   var Twit = require('twit');
   var config = require('./config');
   var T = new Twit(config);
+  var _followersList_array = [];
 
   //node_date_utils.languaje("es");
   //console.log(node_date_utils.today());
