@@ -19,7 +19,7 @@ io.on("connection",function(socket){
 
   socket.on("USER_CONNECT",function(){
     console.log(_serverName+"User connected");
-    socket.emit("USER_CONNECTED");
+    io.emit("USER_CONNECTED");
   });
 
 
