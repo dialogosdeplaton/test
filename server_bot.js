@@ -1,9 +1,9 @@
 var express = require('express');
 var app = express();
-
+app.set('port',process.env.PORT||3000);
 var server = require('http').createServer(app);
 var io = require('socket.io').listen(server);
-app.set('port',process.env.PORT||3000);
+
 
 var Twit = require('twit');
 var config = require('./config');
