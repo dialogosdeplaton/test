@@ -14,12 +14,6 @@ var T = new Twit(config);
 var _serverName = "[moisesServerBot] ";
 var _moises_screen_name= 'taki_ok';
 
-server.listen(app.get('port'),function(){
-  console.log(_serverName + "running...");
-});
-
-
-
 io.on("connection",function(socket){
 
   socket.on("USER_CONNECT",function(){
@@ -93,6 +87,8 @@ io.on("connection",function(socket){
       }
     }
   }
+});
 
-
+server.listen(app.get('port'),function(){
+  console.log(_serverName + "running...");
 });
