@@ -19,14 +19,14 @@ io.on("connection",function(socket){
     console.log(_serverName+"User connected");
     socket.emit("USER_CONNECTED");
   });
- 
+
 
   // OJO: Lista de seguidores
   // Requests / 15-min window (user auth) 15
   // Requests / 15-min window (app auth) 30
   socket.on('getFollowersList',getFollowersList);
 
-  setInterval (getFollowersList,1000*60*16);
+  //setInterval (getFollowersList,1000*60*16);
 
   function getFollowersList(){
     var params = {
@@ -60,6 +60,7 @@ io.on("connection",function(socket){
   //
   // envia tweet al nuevo seguidor!
   //
+  /*
   var stream = T.stream('user');
 
   stream.on('follow',followed);
@@ -85,7 +86,7 @@ io.on("connection",function(socket){
         }
       }
     }
-  }
+  }*/
 });
 
 server.listen(app.get('port'),function(){
