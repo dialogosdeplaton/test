@@ -1,11 +1,10 @@
 var express = require('express');
 var app = express();
 
-app.set('port',process.env.PORT||80);
-
 var server = require('http').createServer(app);
 var io = require('socket.io').listen(server);
 
+app.set('port',process.env.PORT||80);
 
 var Twit = require('twit');
 var config = require('./config');
@@ -20,7 +19,7 @@ io.on("connection",function(socket){
     console.log(_serverName+"User connected");
     socket.emit("USER_CONNECTED");
   });
-
+ 
 
   // OJO: Lista de seguidores
   // Requests / 15-min window (user auth) 15

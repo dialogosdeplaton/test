@@ -1,0 +1,27 @@
+heroku login
+arrglar puerto para heroku
+crear PROFILE
+agregar ENGINEs a package.json
+-Heroku no quiere que subas los modulos que usas, por eso crear .gitignore
+-git init
+-git add
+-git commit - m
+
+
+======================
+git add -A
+git status (veo lo que sta por subirse)
+git commit -m "first commit"
+git remote add origin git@github.com:https://git.heroku.com/moisesserverbot.git
+git push -u origin master //solo  la primera vez
+git push origin master  //despues de la primera vez
+
+//una sola vez
+heroku ps:scale web=1
+
+heroku logs --app herokuApp
+heroku restart web.#
+heroku ps
+heroku help
+
+/socket.io/?EIO=4&transport=websocket
