@@ -25,3 +25,8 @@ heroku ps
 heroku help
 
 /socket.io/?EIO=4&transport=websocket
+
+SI SE ROMPE GIT HUB
+http://stackoverflow.com/questions/1115854/how-to-resolve-error-bad-index-fatal-index-file-corrupt-when-using-git
+Ejemplo de conexion Unity - heroku
+http://stackoverflow.com/questions/34498819/socket-io-woks-with-localhost-but-not-on-heroku-server
