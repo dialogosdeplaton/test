@@ -1,3 +1,4 @@
+====================
 heroku login
 arrglar puerto para heroku
 crear PROFILE
@@ -6,27 +7,33 @@ agregar ENGINEs a package.json
 -git init
 -git add
 -git commit - m
-
-
-======================
+====================== Para la primera vez
 git add -A
 git status (veo lo que sta por subirse)
 git commit -m "first commit"
 git remote add origin git@github.com:https://git.heroku.com/moisesserverbot.git
 git push -u origin master //solo  la primera vez
 git push origin master  //despues de la primera vez
+======================
+Para actualizar cambios en el servidor.
+git add .
+git status
+git commit -m "tipo de actualizacion"
+git push origin master
 
 //una sola vez
 heroku ps:scale web=1
-
+//herramientas
 heroku logs --app herokuApp
 heroku restart web.#
 heroku ps
 heroku help
 
+agregar a la conexion desde unity.
 /socket.io/?EIO=4&transport=websocket
 
 SI SE ROMPE GIT HUB
 http://stackoverflow.com/questions/1115854/how-to-resolve-error-bad-index-fatal-index-file-corrupt-when-using-git
-Ejemplo de conexion Unity - heroku
+Otro ejemplo de conexion Unity - heroku
 http://stackoverflow.com/questions/34498819/socket-io-woks-with-localhost-but-not-on-heroku-server
+https://github.com/teyou/Unity_POC_Socket/blob/master/Server/index.js

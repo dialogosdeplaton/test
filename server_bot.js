@@ -6,7 +6,6 @@ var io = require('socket.io').listen(server);
 
 app.set('port',process.env.PORT||80);
 
-//static
 app.use(express.static(__dirname + '/public'));
 app.get('/',function(req,res){
 	//res.send('<h1>Hello World</h1>');
