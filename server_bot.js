@@ -1,6 +1,4 @@
-var express = require('express');
-var app = express();
-
+var app = require('express');
 var server = require('http').createServer(app);
 var io = require('socket.io').listen(server);
 
@@ -21,7 +19,7 @@ var _serverName = "[moisesServerBot] ";
 var _moises_screen_name= 'taki_ok';
 
 io.on("connection",function(socket){
-
+  console.log("llego la conexion!");
   socket.on("USER_CONNECT",function(){
     console.log(_serverName+"User connected");
     socket.emit("USER_CONNECTED");
@@ -95,7 +93,8 @@ io.on("connection",function(socket){
     }
   }*/
 });
-
+console.log("en el cuerpo del server");
 server.listen(app.get('port'),function(){
   console.log(_serverName + "running...");
+
 });

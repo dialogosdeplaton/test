@@ -14,16 +14,18 @@ public class Controller : MonoBehaviour {
 
 	void Start () {
 		StartCoroutine(ConnectToServer());
+		//socket.Emit("USER_CONNECT");
 		socket.On ("USER_CONNECTED",OnUserConnected);
 		socket.On ("getFollowersList", OnGetFollowersList);
 	}
 
 	IEnumerator ConnectToServer(){
-		yield return new WaitForSeconds(0f);
+		yield return new WaitForSeconds(1.5f);
 		socket.Emit("USER_CONNECT");
-		yield return new WaitForSeconds (0f);
+		yield return new WaitForSeconds (0.15f);
 		socket.Emit("getFollowersList");
 	}
+
 
 	private void OnGetFollowersList(SocketIOEvent obj ){
 

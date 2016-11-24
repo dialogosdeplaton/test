@@ -1,3 +1,10 @@
+===========NODE
+nmp init //genera estructura
+
+=========================
+Instalar heroku
+INstalar el toolbelt de heroku para windows y luego
+https://dashboard.heroku.com/apps/moisesserverbot/deploy/heroku-git
 ====================
 heroku login
 arrglar puerto para heroku
